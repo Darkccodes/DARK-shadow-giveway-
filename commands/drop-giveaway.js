@@ -13,7 +13,7 @@ module.exports = {
             required: true
         },
         {
-            name: 'prize',
+            name: 'reward',
             description: 'What the prize of the giveaway should be',
             type: Discord.ApplicationCommandOptionType.String,
             required: true
@@ -38,7 +38,7 @@ module.exports = {
     
         const giveawayChannel = interaction.options.getChannel('channel');
         const giveawayWinnerCount = interaction.options.getInteger('winners');
-        const giveawayPrize = interaction.options.getString('prize');
+        const giveawayPrize = interaction.options.getString('reward');
     
         if(!giveawayChannel.isTextBased()) {
             return interaction.reply({
